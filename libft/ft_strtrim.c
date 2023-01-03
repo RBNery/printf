@@ -25,17 +25,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i--;
 	return (ft_substr(s1, 0, i + 1));
 }
-
-/*
-#include <stdio.h>
-
-int	main()
-{
-	char	*s1 = "";
-	char	*set = " \n\t";
-	printf("%s\n", ft_strtrim(s1, set));
-	printf("s1: %s	|	size: %d	|	set: %s\n \
-	Result: %s	|	Size: %d\n", s1, ft_strlen(s1), set, \
-	ft_strtrim(s1, set), ft_strlen(ft_strtrim(s1, set)));
-}
-*/

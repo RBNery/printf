@@ -6,13 +6,13 @@
 /*   By: rbatisti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 14:18:02 by rbatisti          #+#    #+#             */
-/*   Updated: 2022/11/15 14:18:04 by rbatisti         ###   ########.fr       */
+/*   Updated: 2022/11/17 10:23:22 by rbatisti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	if (!f || !lst)
 		return ;

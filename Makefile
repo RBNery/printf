@@ -1,36 +1,34 @@
-NAME			= libftprintf.a
+NAME		= libftprintf.a
 
-INCLUDE 		= ./include
-SRC				= ./src
+INCLUDE 	= ./include
+SRC		= ./src
 
-CFLAGS			= -g -I./include
-CC				= gcc
-FLAGLIB			= -rcs
-RM				= /bin/rm -f
+CFLAGS		= -Wall -Wextra -Werror -I./include
+CC		= cc
+FLAGLIB		= -rcs
+RM		= rm -f
 
-LIBFT_DIR		= ./libft
-LIBFT			= ./libft/libft.a
+LIBFT_DIR	= ./libft
+LIBFT		= ./libft/libft.a
 
-FT_PRINTF		= ft_printf.c ft_printf_utils.c ft_pointer.c print_hex.c 
-OBJECTS			= $(FT_PRINTF:.c=.o)
+FT_PRINTF	= ft_printf.c ft_printf_utils.c ft_pointer.c print_hex.c 
+OBJECTS		= $(FT_PRINTF:.c=.o)
 
-all:				$(NAME)
 
 all: $(NAME)
 
 $(NAME): $(LIBFT) $(OBJECTS)
-	@echo "Linking $(NAME)"
+	@echo "$(NAME)"
 	@cp $(LIBFT) $(NAME)
 	@ar $(FLAGLIB) $(NAME) $(OBJECTS)
 	@ranlib $(NAME)
 
 $(LIBFT): $(LIBFT_DIR)
-	@echo "Compiling libft"
 	@$(MAKE) -C $(LIBFT_DIR)
 
 %.o: $(SRC)/%.c
 	@$(CC) $(CFLAGS) -c $< -o $@
-	@echo "Compiling $<"
+	@echo "$<"
 
 clean:
 	@$(MAKE) clean -C $(LIBFT_DIR)
@@ -41,4 +39,5 @@ fclean:		clean
 			@$(RM) $(NAME)
 
 re: fclean all
+
 

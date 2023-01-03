@@ -6,13 +6,13 @@
 /*   By: rbatisti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 14:20:55 by rbatisti          #+#    #+#             */
-/*   Updated: 2022/11/15 15:17:25 by rbatisti         ###   ########.fr       */
+/*   Updated: 2022/11/29 11:30:18 by rbatisti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_wordcount(char const *s, char c)
+static int	ft_countw(char const *s, char c)
 {
 	int	i;
 	int	count;
@@ -49,7 +49,7 @@ static int	ft_wordlen(char const *s, char c, int start)
 	return (i);
 }
 
-static char	*ft_getword(char const *s, char c, int start)
+static char	*ft_get(char const *s, char c, int start)
 {
 	char	*word;
 	int		len;
@@ -78,14 +78,14 @@ char	**ft_split(char const *s, char c)
 {
 	int		i;
 	int		j;
-	char	**arr;
+	char	**ar;
 
 	i = 0;
 	j = 0;
 	if (!s)
 		return (NULL);
-	arr = (char **)malloc((ft_wordcount(s, c) + 1) * sizeof(char *));
-	if (!arr)
+	ar = (char **)malloc((ft_countw(s, c) + 1) * sizeof(char *));
+	if (!ar)
 		return (NULL);
 	while (*(s + i) != '\0')
 	{
@@ -93,11 +93,11 @@ char	**ft_split(char const *s, char c)
 			i++;
 		if (*(s + i) != '\0')
 		{
-			arr[j++] = ft_getword(s, c, i++);
+			ar[j++] = ft_get(s, c, i++);
 		}
 		while (*(s + i) != c && *(s + i) != '\0')
 			i++;
 	}
-	arr[j] = NULL;
-	return (arr);
+	ar[j] = NULL;
+	return (ar);
 }

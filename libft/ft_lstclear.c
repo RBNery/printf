@@ -6,13 +6,13 @@
 /*   By: rbatisti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 14:17:07 by rbatisti          #+#    #+#             */
-/*   Updated: 2022/11/15 14:17:09 by rbatisti         ###   ########.fr       */
+/*   Updated: 2022/11/17 10:27:33 by rbatisti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstclear(t_list **lst, void (*del)(void*))
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*p;
 

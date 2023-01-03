@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rbatisti <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/17 10:26:18 by rbatisti          #+#    #+#             */
+/*   Updated: 2022/11/17 10:27:05 by rbatisti         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
@@ -29,7 +40,6 @@ int	ft_atoi(const char *str)
 		final *= -1;
 	return (final);
 }
-
 /*
 #include <stdio.h>
 #include <stdlib.h>
@@ -40,4 +50,3 @@ int		main(void)
 	printf("minha: 	  %d\n", ft_atoi(str));
 	printf("original: %d\n", atoi(str));
 }*/
-

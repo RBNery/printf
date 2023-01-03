@@ -1,9 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rbatisti <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/03 09:01:28 by rbatisti          #+#    #+#             */
+/*   Updated: 2023/01/03 09:03:12 by rbatisti         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LIBFT_H
 # define LIBFT_H
 
 # include <unistd.h>
 # include <stdlib.h>
-
 
 int		ft_isalpha(int a);
 int		ft_isdigit(int a);
@@ -28,9 +39,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_atoi(const char *str);
 void	*ft_calloc(size_t num, size_t size);
 char	*ft_strdup(const char *s);
-int	ft_memcmp(const void *s1, const void *s2, size_t n);
-
-
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
@@ -44,8 +53,7 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
-
-char    *ft_utoa(unsigned int n);
+char	*ft_utoa(unsigned int n);
 
 typedef struct s_list
 {

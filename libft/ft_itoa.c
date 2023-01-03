@@ -6,23 +6,23 @@
 /*   By: rbatisti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 14:12:07 by rbatisti          #+#    #+#             */
-/*   Updated: 2022/11/15 14:12:08 by rbatisti         ###   ########.fr       */
+/*   Updated: 2022/11/17 10:26:02 by rbatisti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int     pos_num(int n)
+static int	pos_num(int n)
 {	
 	if (n < 0)
 		return (-n);
 	return (n);
 }
- 
-static int     num_len(int n)
+
+static int	num_len(int n)
 {
 	int	len;
-	
+
 	len = 0;
 	if (n <= 0)
 		++len;
@@ -33,12 +33,12 @@ static int     num_len(int n)
 	}
 	return (len);
 }
- 
-char    *ft_itoa(int n)
+
+char	*ft_itoa(int n)
 {
 	char	*res;
-	int	len;
- 
+	int		len;
+
 	len = num_len(n);
 	res = malloc(sizeof(char) * (len + 1));
 	if (!res)

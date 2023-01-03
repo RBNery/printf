@@ -1,16 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_utoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rbatisti <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/03 09:05:31 by rbatisti          #+#    #+#             */
+/*   Updated: 2023/01/03 09:05:37 by rbatisti         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-static int     pos_num(unsigned int n)
+static int	pos_num(unsigned int n)
 {	
 	if (n < 0)
 		return (-n);
 	return (n);
 }
- 
-static int     num_len(unsigned int n)
+
+static int	num_len(unsigned int n)
 {
 	int	len;
-	
+
 	len = 0;
 	if (n <= 0)
 		++len;
@@ -21,12 +33,12 @@ static int     num_len(unsigned int n)
 	}
 	return (len);
 }
- 
-char    *ft_utoa(unsigned int n)
+
+char	*ft_utoa(unsigned int n)
 {
 	char	*res;
-	int	len;
- 
+	int		len;
+
 	len = num_len(n);
 	res = malloc(sizeof(char) * (len + 1));
 	if (!res)
